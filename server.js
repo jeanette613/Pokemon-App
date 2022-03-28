@@ -7,6 +7,7 @@ app.get('/', (req, res) => {
     res.send('Welcome to the Pokemon App');
 });
 
+//Need to change this route to Index??
 app.get('/', (req, res) => {
     res.send(pokemon)
 });
