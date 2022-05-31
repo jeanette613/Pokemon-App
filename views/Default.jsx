@@ -1,15 +1,11 @@
 const React = require('react');
 
-const myStyle = {
-    color: '#ffffff',
-    backgroundColor: '#000000',
 
-};
 //This took some moving around! I almost forgot the "render" since it wasnt in markdown. tricky :)
-class MyFirstComponent extends React.Component {
+class DefaultLayout extends React.Component {
     render() {
+        const { pokemon } = this.props;
         return (
-
             <html lang="en">
                 <head>
                     <meta charset="UTF-8" />
@@ -18,12 +14,16 @@ class MyFirstComponent extends React.Component {
                     <title>We Got Pokemon!</title>
                 </head>
                 <body>
-                    <h1>See All The Pokemon</h1>
-                    <div style={myStyle}>My First React Component</div>
+                    <header>
+                        <h1>See All The Pokemon</h1>
+                    </header>
+                    <main>
+                        {this.props.children}
+                    </main>
 
                 </body>
             </html>
         )
     }
 }
-module.exports = MyFirstComponent;
+module.exports = DefaultLayout;

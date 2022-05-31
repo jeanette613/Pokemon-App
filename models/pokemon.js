@@ -1,4 +1,4 @@
-const mongoose = require("./connection");
+const mongoose = require("./database");
 
 const { Schema, model } = mongoose;
 
@@ -20,7 +20,3 @@ module.exports = Pokemon;
 //     { name: "squirtle", img: "http://img.pokemondb.net/artwork/squirtle" },
 //     { name: "wartortle", img: "http://img.pokemondb.net/artwork/wartortle" }
 // ];
-
-
-
-module.exports = pokemon

@@ -1,5 +1,5 @@
 const express = require('express');
-const Pokemon = require("../models.pokemon");
+const Pokemon = require("../models/pokemon");
 
 //create router to pass to routes
 const router = express.Router();
@@ -58,7 +58,7 @@ router.delete('/pokemon/:id', (req, res) => {
 router.post('/', (req, res) => {
     Pokemon.create(req.body)
         .then((createdPokemon) => {
-            res.redirect(`/fruits/${createdPokemon._id}`)
+            res.redirect(`/pokemon/${createdPokemon._id}`)
         })
         .catch((error) => {
             res.status(400).json({ error })
