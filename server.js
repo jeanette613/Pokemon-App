@@ -3,7 +3,7 @@ require('dotenv').config(); // Loads Env vars into process.env
 const express = require('express');
 const morgan = require('morgan');
 const methodOverride = require('method-override');
-const fruitController = require('./controllers/fruits')
+const pokemonController = require('./controllers/pokemon,')
 const path = require('path');
 
 //Express Set-Up
